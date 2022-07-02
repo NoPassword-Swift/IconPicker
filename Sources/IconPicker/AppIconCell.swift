@@ -10,7 +10,7 @@ import ConstraintKit
 import UIKit
 import NPKit
 
-class AppIconCell: NPCollectionViewCell {
+class AppIconCell: UICollectionViewCell {
 	private let outlineView: NPView = {
 		let view = NPView()
 		view.backgroundColor = Color.systemBlue
@@ -31,10 +31,6 @@ class AppIconCell: NPCollectionViewCell {
 		view.layer.cornerCurve = CALayerCornerCurve.continuous
 		return view
 	}()
-
-	public convenience init() {
-		self.init(frame: .zero)
-	}
 
 	public override init(frame: CGRect) {
 		super.init(frame: frame)
