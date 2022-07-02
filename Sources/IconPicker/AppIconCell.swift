@@ -32,8 +32,12 @@ class AppIconCell: NPCollectionViewCell {
 		return view
 	}()
 
-	override init() {
-		super.init()
+	public convenience init() {
+		self.init(frame: .zero)
+	}
+
+	public override init(frame: CGRect) {
+		super.init(frame: frame)
 
 		self.addSubview(self.outlineView)
 		self.addSubview(self.fillView)
