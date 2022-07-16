@@ -22,8 +22,8 @@ public class AppIconController<T: AppIconType>: NPCollectionViewController, UICo
 
 	public override func viewDidLoad() {
 		super.viewDidLoad()
+		self.title = NSLocalizedString("localized.feature.changeAppIcon", comment: "")
 		self.navigationItem.largeTitleDisplayMode = .never
-		self.navigationItem.title = NSLocalizedString("ChangeAppIcon", comment: "")
 
 		self.collectionView.register(AppIconCell.self, forCellWithReuseIdentifier: AppIconCellIdentifier)
 	}
