@@ -64,8 +64,8 @@ public class AppIconController<T: AppIconType>: NPCollectionViewController, UICo
 
 		T.setCurrentIndex(indexPath.row) { err in
 			if let err = err {
-				let alertController = UIAlertController(title: NSLocalizedString("IconChangeFailure", comment: ""), message: err.localizedDescription, preferredStyle: .alert)
-				alertController.addAction(UIAlertAction(title: NSLocalizedString("Dismiss", comment: ""), style: .default))
+				let alertController = UIAlertController(title: NSLocalizedString("localized.feature.error.changeAppIcon", comment: ""), message: err.localizedDescription, preferredStyle: .alert)
+				alertController.addAction(UIAlertAction(title: NSLocalizedString("localized.menu.dismiss", comment: ""), style: .default))
 				self.present(alertController, animated: true, completion: nil)
 
 				self.hightlightSelectedIcon(old: self.currentIconIndex, new: oldIconIndex)
